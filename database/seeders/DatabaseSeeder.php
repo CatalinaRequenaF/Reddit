@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Like;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,9 +17,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
-            UsersSeeder::class,
-            CommunitySeeder::class,
+            //UsersSeeder::class,
+            //CommunitySeeder::class,
             PostsSeeder::class,
+            CommentsSeeder::class
             
         ]);
         //Post::factory(10)->create();

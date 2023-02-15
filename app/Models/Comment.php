@@ -20,5 +20,11 @@ class Comment extends Model
     {
         return $this->belongsTo(Post::class);
     }
+
+    //POLIMORFICA MUCHOS A MUCHOS
+    public function likes()
+    {
+        return $this->morphToMany(Like::class, 'likeable');
+    }
 }
 

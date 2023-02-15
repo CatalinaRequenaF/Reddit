@@ -50,11 +50,18 @@ class User extends Authenticatable
       {
           return $this->hasMany(Post::class);
       }
+
     //Relacion uno a muchos inversa
     
       public function communities()
       {
           return $this->hasMany(Community::class);
+      }
+
+      //Muchos a muchos
+      public function likes()
+      {
+          return $this->hasMany(Likes::class);
       }
 
     // --------------------------------------------------------------

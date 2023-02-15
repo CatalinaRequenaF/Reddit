@@ -17,6 +17,6 @@ class CommunitySeeder extends Seeder
     {
         //
 
-        \App\Models\Community::factory(10)->create();
+        \App\Models\Community::factory(5)->create();
     }
 }

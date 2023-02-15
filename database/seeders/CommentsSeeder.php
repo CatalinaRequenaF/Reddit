@@ -4,12 +4,11 @@ namespace Database\Seeders;
 
 use App\Models\Comment;
 use App\Models\Like;
-use App\Models\User;
+use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Post;
 
-class PostsSeeder extends Seeder
+class CommentsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,8 +17,8 @@ class PostsSeeder extends Seeder
      */
     public function run()
     {
-        $post = Post::factory(4)
+        $comment = Comment::factory(4)
         ->has(Like::factory()->count(3))
-        ->create();     
+        ->create();
     }
 }
