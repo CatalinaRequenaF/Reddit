@@ -10,9 +10,9 @@ class Like extends Model
     use HasFactory;
 
     //Muchos a muchos inversa
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     //POLIMORFICA MUCHOS A MUCHOS INVERSA
